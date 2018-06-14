@@ -17,6 +17,7 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
+    % Following the equation of gradient descent
     delta = (X * theta - y)' * X;
     theta = theta - alpha * delta' / m;
 
