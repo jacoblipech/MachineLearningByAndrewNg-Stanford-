@@ -21,6 +21,8 @@ grad = zeros(size(theta));
 h = X*theta;
 J = sum((h-y).^2) / (2*m) + lambda/2/m * (sum(theta .^ 2) - theta(1)^2);
 
+% this is the bias so no regularization is done
+% grad is the partial derivative of regularized linear regression
 grad(1) = sum((h-y) .* X(:,1)) / m;
 
 for j = 2:size(theta)
